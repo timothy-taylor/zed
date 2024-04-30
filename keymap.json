@@ -4,17 +4,17 @@
     "bindings": {
       "g r": "editor::FindAllReferences",
       "g i": "editor::GoToDefinitionSplit",
-      // "g k": "editor::Hover", 'g h' instead Go to Hover
-      // "space r n": "editor::Rename", 'c d' instead (Change Definition)
-      "] d": "editor::GoToDiagnostic",
-      "[ d": "editor::GoToPrevDiagnostic",
+      "space r n": "editor::Rename",
       "ctrl-h": ["workspace::SendKeystrokes", "ctrl-w h"],
       "ctrl-l": ["workspace::SendKeystrokes", "ctrl-w l"],
       "ctrl-k": ["workspace::SendKeystrokes", "ctrl-w k"],
       "ctrl-j": ["workspace::SendKeystrokes", "ctrl-w j"],
       "v s": "pane::SplitRight",
       "space g": "editor::ToggleGitBlame",
-      "space s": "pane::DeploySearch"
+      "space s": "pane::DeploySearch",
+      "space n": ["workspace::SendKeystrokes", "*"],
+      "space b": ["workspace::SendKeystrokes", "#"],
+      "space f": ["workspace::SendKeystrokes", "cmd-p"]
     }
   },
   {
@@ -40,7 +40,8 @@
   {
     "context": "Workspace",
     "bindings": {
-      "shift-k": "project_panel::CollapseAllEntries"
+      "shift-k": "project_panel::CollapseAllEntries",
+      "cmd-s": "pane::DeploySearch"
     }
   },
   {
