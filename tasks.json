@@ -1,0 +1,29 @@
+[
+  {
+    "label": "Start Dev Server",
+    "command": "turbo",
+    "args": ["run", "start"],
+    "use_new_terminal": true,
+    "reveal": "always",
+    "hide": "never",
+    "shell": "system"
+  },
+  {
+    "label": "Run Tests",
+    "command": "turbo",
+    "args": ["run", "test"],
+    "use_new_terminal": true,
+    "reveal": "always",
+    "hide": "never",
+    "shell": "system"
+  },
+  {
+    "label": "Run Bundle Visualizer",
+    "command": "npx",
+    "args": ["vite-bundle-visualizer"],
+    "use_new_terminal": true,
+    "reveal": "always",
+    "hide": "never",
+    "shell": "system"
+  }
+]
