@@ -1,32 +1,69 @@
 {
-  "features": {
-    "inline_completion_provider": "none"
+  "auto_update_extensions": {
+    "hacker-theme": false
   },
-  "assistant": {
-    "dock": "bottom",
+  "context_servers": {
+    "effect-mcp": {
+      "source": "custom",
+      "command": "npx",
+      "args": ["-y", "effect-mcp"],
+      "env": {}
+    }
+  },
+  "edit_predictions": {
+    "mode": "subtle",
+    "copilot": {
+      "proxy": null,
+      "proxy_no_verify": null
+    },
+    "enabled_in_text_threads": false
+  },
+  "show_edit_predictions": false,
+  "features": {
+    "edit_prediction_provider": "zed"
+  },
+  "agent": {
+    "inline_assistant_model": {
+      "provider": "zed.dev",
+      "model": "claude-sonnet-4"
+    },
+    "always_allow_tool_actions": true,
+    "default_profile": "ask",
+    "dock": "right",
     "default_model": {
       "provider": "zed.dev",
-      "model": "claude-3-5-sonnet-20240620"
-    },
-    "version": "2"
+      "model": "claude-sonnet-4"
+    }
   },
-  "show_inline_completions": false,
-  "theme": "Solarized Light",
+  "language_models": {
+    "bedrock": {
+      "authentication_method": "named_profile",
+      "profile": "default",
+      "region": "us-west-2"
+    }
+  },
+
+  "theme": "ZedHacker Matrix",
   "vim_mode": true,
-  "ui_font_family": "Hack",
-  "ui_font_size": 12,
-  "buffer_font_family": "Hack",
-  "buffer_line_height": "standard",
-  "buffer_font_size": 11,
+  "ui_font_family": "Hasklug Nerd Font Mono",
+  "ui_font_size": 13,
+  "buffer_font_family": "Hasklug Nerd Font Mono",
+  "buffer_font_weight": 400,
+  "buffer_line_height": "comfortable",
+  "buffer_font_size": 15.0,
   "relative_line_numbers": true,
   "cursor_blink": false,
   "vertical_scroll_margin": 0,
   "unnecessary_code_fade": 0.7,
+  "minimap": { "show": "never" },
   "project_panel": {
-    "dock": "right"
+    "dock": "left"
   },
   "terminal": {
-    "dock": "bottom"
+    "dock": "bottom",
+    "cursor_shape": "bar",
+    "font_size": 13,
+    "font_weight": 300
   },
   "scrollbar": {
     "show": "never"
@@ -34,7 +71,14 @@
   "tab_bar": {
     "show": false
   },
+  "file_scan_inclusions": [".schema-temp"],
   "languages": {
+    "TypeScript": {
+      "show_edit_predictions": false
+    },
+    "Markdown": {
+      "soft_wrap": "editor_width"
+    },
     "JavaScript": {
       "format_on_save": {
         "external": {

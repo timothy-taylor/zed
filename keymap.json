@@ -11,7 +11,7 @@
       "ctrl-j": ["workspace::SendKeystrokes", "ctrl-w j"],
       "v s": "pane::SplitRight",
       "h s": "pane::SplitDown",
-      "space g": "editor::ToggleGitBlame",
+      "space g": "git::Blame",
       "space s": "pane::DeploySearch",
       "space n": ["workspace::SendKeystrokes", "*"],
       "space b": ["workspace::SendKeystrokes", "#"],
@@ -32,16 +32,15 @@
   {
     "context": "Dock",
     "bindings": {
-      "ctrl-h": ["workspace::ActivatePaneInDirection", "Left"],
-      "ctrl-l": ["workspace::ActivatePaneInDirection", "Right"],
-      "ctrl-k": ["workspace::ActivatePaneInDirection", "Up"],
-      "ctrl-j": ["workspace::ActivatePaneInDirection", "Down"]
+      "ctrl-h": "workspace::ActivatePaneLeft",
+      "ctrl-l": "workspace::ActivatePaneRight",
+      "ctrl-k": "workspace::ActivatePaneUp",
+      "ctrl-j": "workspace::ActivatePaneDown"
     }
   },
   {
     "context": "Workspace",
     "bindings": {
-      "shift-k": "project_panel::CollapseAllEntries",
       "cmd-s": "pane::DeploySearch"
     }
   },
