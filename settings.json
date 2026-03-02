@@ -1,17 +1,15 @@
 {
-  "auto_update_extensions": {
-    "hacker-theme": false
-  },
+  "colorize_brackets": false,
   "context_servers": {
-    "effect-mcp": {
-      "source": "custom",
+    "effect-docs": {
+      "enabled": true,
       "command": "npx",
-      "args": ["-y", "effect-mcp"],
+      "args": ["-y", "effect-mcp@latest"],
       "env": {}
     }
   },
   "edit_predictions": {
-    "mode": "subtle",
+    "mode": "eager",
     "copilot": {
       "proxy": null,
       "proxy_no_verify": null
@@ -24,16 +22,14 @@
   },
   "agent": {
     "inline_assistant_model": {
-      "provider": "zed.dev",
-      "model": "claude-sonnet-4"
+      "provider": "copilot_chat",
+      "model": "gpt-5-mini"
     },
-    "always_allow_tool_actions": true,
-    "default_profile": "ask",
-    "dock": "right",
     "default_model": {
-      "provider": "zed.dev",
-      "model": "claude-sonnet-4"
-    }
+      "provider": "copilot_chat",
+      "model": "gpt-5-mini"
+    },
+    "model_parameters": []
   },
   "language_models": {
     "bedrock": {
@@ -50,8 +46,8 @@
   "buffer_font_family": "Hasklug Nerd Font Mono",
   "buffer_font_weight": 400,
   "buffer_line_height": "comfortable",
-  "buffer_font_size": 15.0,
-  "relative_line_numbers": true,
+  "buffer_font_size": 14.0,
+  "relative_line_numbers": "enabled",
   "cursor_blink": false,
   "vertical_scroll_margin": 0,
   "unnecessary_code_fade": 0.7,
@@ -68,24 +64,22 @@
   "scrollbar": {
     "show": "never"
   },
-  "tab_bar": {
-    "show": false
-  },
   "file_scan_inclusions": [".schema-temp"],
   "languages": {
-    "TypeScript": {
-      "show_edit_predictions": false
-    },
     "Markdown": {
       "soft_wrap": "editor_width"
     },
     "JavaScript": {
-      "format_on_save": {
+      "formatter": {
         "external": {
           "command": "prettier",
-          "arguments": ["--stdin-filepath", "{buffer_path}"]
+          "arguments": [
+            "--stdin-filepath",
+            "{buffer_path}"
+          ]
         }
-      }
+      },
+      "format_on_save": "on"
     }
   }
 }
